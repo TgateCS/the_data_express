@@ -1,0 +1,34 @@
+extends layout
+
+block content
+    form(method="POST" action="/login")
+        p Username:
+            input(type="text" name="username")
+        p Password: 
+            input(type="password" name="password")
+        p
+            input(type="submit" value="Login")
+
+    p Not a Member? 
+        a(href="/create") Sign Up Now
+
+    table(class="user-table")
+        tr
+            th id
+            th username
+            th password
+            th email
+            th age
+            th question1
+            th question2
+            th question3
+        each member in members
+            tr
+                td #{member.id}
+                td #{member.username}
+                td #{member.password}
+                td #{member.email}
+                td #{member.age}
+                td #{member.question1}
+                td #{member.question2}
+                td #{member.question3}

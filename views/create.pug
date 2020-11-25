@@ -1,0 +1,30 @@
+extends layout
+
+block content
+    h1 Create Account
+    form(id="form" method="POST" action="/create")
+        p Username: 
+            input(type="text" name="username")
+        p Password: 
+            input(type="text" name="password")
+        p Email: 
+            input(type="text" name="email")
+        p Age: 
+            input(type="number" name="age")
+        p Question #1: What region are you in? 
+            select(name="question1")
+                option(value="North America") North America
+                option(value="Europe") Europe
+                option(value="Asia") Asia
+        p Question #2: Do you exist, or are you from another being's imagination? 
+            select(name="question2")
+                option(value="I exist") I exist
+                option(value="I am a figment of imagination") I am a figment of imagination
+                option(value="I am unsure") I am unsure
+        p Question #3: If pinocchio says he is lying, what happens? 
+            select(name="question3")
+                option(value="his nose grows") His nose grows
+                option(value="his nose remains the same") His nose remains the same size
+                option(value="he implodes") pinocchio enters a paradoxical state and implodes
+        p
+            input(type="submit" value="Create Account")
